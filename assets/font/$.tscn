@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/terra.png" type="Texture" id=1]
+[ext_resource path="res://assets/font/$.gd" type="Script" id=2]
+
+[node name="Sprite" type="Sprite"]
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 416, 144, 16, 16 )
+script = ExtResource( 2 )
