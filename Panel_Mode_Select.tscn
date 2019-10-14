@@ -1,0 +1,109 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/font/arial20.tres" type="DynamicFont" id=1]
+[ext_resource path="res://TextureButtons/TextureButton_Career.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TextureButtons/TextureButton_Challenge.tscn" type="PackedScene" id=3]
+[ext_resource path="res://TextureButtons/TextureButton_Save.tscn" type="PackedScene" id=4]
+
+[node name="Panel" type="Panel"]
+margin_top = 96.0
+margin_right = 592.0
+margin_bottom = 704.0
+
+[node name="B_Left_one" type="Button" parent="."]
+margin_left = 16.0
+margin_top = 324.0
+margin_right = 212.0
+margin_bottom = 388.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 15
+size_flags_vertical = 15
+custom_fonts/font = ExtResource( 1 )
+
+[node name="B_Right_one" type="Button" parent="."]
+margin_left = 228.0
+margin_top = 324.0
+margin_right = 424.0
+margin_bottom = 388.0
+custom_fonts/font = ExtResource( 1 )
+
+[node name="B_Left_two" type="Button" parent="."]
+margin_left = 16.0
+margin_top = 404.0
+margin_right = 212.0
+margin_bottom = 468.0
+custom_fonts/font = ExtResource( 1 )
+
+[node name="B_Right_two" type="Button" parent="."]
+margin_left = 226.568
+margin_top = 404.0
+margin_right = 422.568
+margin_bottom = 468.0
+custom_fonts/font = ExtResource( 1 )
+
+[node name="B_Left_three" type="Button" parent="."]
+margin_left = 16.0
+margin_top = 484.0
+margin_right = 212.0
+margin_bottom = 548.0
+custom_fonts/font = ExtResource( 1 )
+
+[node name="B_Right_three" type="Button" parent="."]
+margin_left = 228.0
+margin_top = 484.0
+margin_right = 424.0
+margin_bottom = 548.0
+custom_fonts/font = ExtResource( 1 )
+
+[node name="B_OK" type="Button" parent="."]
+margin_left = 478.0
+margin_top = 528.0
+margin_right = 576.0
+margin_bottom = 592.0
+custom_fonts/font = ExtResource( 1 )
+text = "OK"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 576.0
+margin_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 206.0
+margin_right = 576.0
+margin_bottom = 302.0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+text = "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="TextureButton" parent="." instance=ExtResource( 2 )]
+margin_left = 16.0
+margin_top = 112.0
+margin_right = 80.0
+margin_bottom = 176.0
+
+[node name="TextureButton2" parent="." instance=ExtResource( 3 )]
+margin_left = 96.0
+margin_top = 112.0
+margin_right = 160.0
+margin_bottom = 176.0
+
+[node name="TextureButton3" parent="." instance=ExtResource( 4 )]
+margin_left = 176.0
+margin_top = 112.0
+margin_right = 240.0
+margin_bottom = 176.0

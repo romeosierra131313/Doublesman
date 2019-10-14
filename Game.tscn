@@ -1,0 +1,1650 @@
+[gd_scene load_steps=40 format=2]
+
+[ext_resource path="res://_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://scripts/Control_Title.gd" type="Script" id=2]
+[ext_resource path="res://assets/1516066.jpg" type="Texture" id=3]
+[ext_resource path="res://Panel_Mode_Select.tscn" type="PackedScene" id=4]
+[ext_resource path="res://PanelBlank.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/font/arial.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://TextureButtons/TextureButton_House.tscn" type="PackedScene" id=7]
+[ext_resource path="res://TextureButtons/TextureButton_Settings.tscn" type="PackedScene" id=8]
+[ext_resource path="res://TextureButtons/TextureButton_Credits.tscn" type="PackedScene" id=9]
+[ext_resource path="res://TextureButtons/TextureButton_Help.tscn" type="PackedScene" id=10]
+[ext_resource path="res://TextureButtons/TextureButton_Quit.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scripts/Control_Game.gd" type="Script" id=12]
+[ext_resource path="res://Upgrades.gd" type="Script" id=13]
+[ext_resource path="res://TextureButtons/TextureButton_RightArrow.tscn" type="PackedScene" id=14]
+[ext_resource path="res://TextureButtons/TextureButton_LeftArrow.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Marketing.gd" type="Script" id=16]
+[ext_resource path="res://icons/marketing/Sprite_Paper_Icon.tscn" type="PackedScene" id=17]
+[ext_resource path="res://icons/marketing/Sprite_Internet_Icon.tscn" type="PackedScene" id=18]
+[ext_resource path="res://icons/marketing/Sprite_Sign_Icon.tscn" type="PackedScene" id=19]
+[ext_resource path="res://icons/marketing/Sprite_Mail_Icon.tscn" type="PackedScene" id=20]
+[ext_resource path="res://icons/marketing/Sprite_Radi_Icon.tscn" type="PackedScene" id=21]
+[ext_resource path="res://icons/marketing/Sprite_TV_Icon.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scripts/Recipe.gd" type="Script" id=23]
+[ext_resource path="res://icons/Sprite_Channa.tscn" type="PackedScene" id=24]
+[ext_resource path="res://icons/Sprite_Bhara.tscn" type="PackedScene" id=25]
+[ext_resource path="res://icons/Sprite_Chutney.tscn" type="PackedScene" id=26]
+[ext_resource path="res://icons/Sprite_Drinks.tscn" type="PackedScene" id=27]
+[ext_resource path="res://scripts/Channa.gd" type="Script" id=28]
+[ext_resource path="res://assets/font/arial50.tres" type="DynamicFont" id=29]
+[ext_resource path="res://scripts/Bhara.gd" type="Script" id=30]
+[ext_resource path="res://scripts/Chutney.gd" type="Script" id=31]
+[ext_resource path="res://scripts/Drinks.gd" type="Script" id=32]
+[ext_resource path="res://assets/terra.png" type="Texture" id=33]
+[ext_resource path="res://assets/font/arial24.tres" type="DynamicFont" id=34]
+[ext_resource path="res://Panel_Info.gd" type="Script" id=35]
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 18
+font_data = ExtResource( 6 )
+
+[node name="Tree" type="Tree"]
+margin_right = 1280.0
+margin_bottom = 720.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+visible = false
+mode = 1
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 64, 32 )
+format = 1
+tile_data = PoolIntArray( -1310702, 12, 0, -1310701, 12, 0, -1310700, 12, 0, -1245167, 12, 0, -1245166, 12, 0, -1245165, 12, 0, -1245164, 12, 0, -1245163, 12, 0, -1245162, 12, 0, -1179633, 12, 0, -1179632, 12, 0, -1179631, 12, 0, -1179630, 12, 0, -1179629, 12, 0, -1179628, 12, 0, -1179627, 12, 0, -1179626, 12, 0, -1179625, 12, 0, -1114099, 12, 0, -1114098, 12, 0, -1114097, 12, 0, -1114096, 12, 0, -1114095, 12, 0, -1114094, 12, 0, -1114093, 12, 0, -1114092, 12, 0, -1114091, 12, 0, -1114090, 12, 0, -1114089, 12, 0, -1048564, 12, 0, -1048563, 12, 0, -1048561, 12, 0, -1048560, 12, 0, -1048559, 12, 0, -1048558, 12, 0, -1048557, 12, 0, -1048556, 12, 0, -1048555, 12, 0, -1048554, 12, 0, -1048553, 12, 0, -1048552, 12, 0, -1048551, 12, 0, -983029, 12, 0, -983028, 12, 0, -983027, 12, 0, -983026, 12, 0, -983025, 12, 0, -983024, 12, 0, -983023, 12, 0, -983022, 12, 0, -983021, 12, 0, -983020, 12, 0, -983019, 12, 0, -983018, 12, 0, -983017, 12, 0, -983016, 12, 0, -983015, 12, 0, -983014, 12, 0, -917494, 12, 0, -917492, 12, 0, -917491, 12, 0, -917490, 12, 0, -917489, 12, 0, -917488, 12, 0, -917487, 12, 0, -917486, 12, 0, -917485, 12, 0, -917484, 12, 0, -917483, 12, 0, -917482, 12, 0, -917481, 12, 0, -917480, 12, 0, -917479, 12, 0, -917478, 12, 0, -917477, 12, 0, -851959, 12, 0, -851958, 12, 0, -851957, 12, 0, -851956, 12, 0, -851955, 12, 0, -851954, 12, 0, -851953, 12, 0, -851952, 12, 0, -851951, 12, 0, -851950, 12, 0, -851949, 12, 0, -851948, 12, 0, -851947, 12, 0, -851946, 12, 0, -851945, 12, 0, -851944, 12, 0, -851943, 12, 0, -851942, 12, 0, -851941, 12, 0, -851940, 12, 0, -786424, 12, 0, -786423, 12, 0, -786422, 12, 0, -786421, 12, 0, -786420, 12, 0, -786419, 12, 0, -786418, 12, 0, -786417, 12, 0, -786416, 12, 0, -786415, 12, 0, -786414, 12, 0, -786413, 12, 0, -786412, 12, 0, -786411, 12, 0, -786410, 12, 0, -786409, 12, 0, -786408, 12, 0, -786407, 12, 0, -786406, 12, 0, -786405, 12, 0, -786404, 12, 0, -786403, 12, 0, -720888, 12, 0, -720887, 12, 0, -720886, 12, 0, -720885, 12, 0, -720884, 12, 0, -720883, 12, 0, -720882, 12, 0, -720881, 12, 0, -720880, 12, 0, -720879, 12, 0, -720878, 12, 0, -720877, 12, 0, -720876, 12, 0, -720875, 12, 0, -720874, 12, 0, -720873, 12, 0, -720872, 12, 0, -720871, 12, 0, -720870, 12, 0, -720869, 12, 0, -720868, 12, 0, -720867, 12, 0, -720866, 12, 0, -655351, 12, 0, -655350, 12, 0, -655349, 12, 0, -655348, 12, 0, -655347, 12, 0, -655346, 12, 0, -655345, 12, 0, -655344, 12, 0, -655343, 12, 0, -655342, 12, 0, -655341, 12, 0, -655340, 12, 0, -655339, 12, 0, -655338, 12, 0, -655337, 12, 0, -655336, 12, 0, -655335, 12, 0, -655334, 12, 0, -655333, 12, 0, -655332, 12, 0, -655331, 12, 0, -655330, 12, 0, -655329, 12, 0, -589815, 12, 0, -589814, 12, 0, -589813, 12, 0, -589812, 12, 0, -589811, 12, 0, -589810, 12, 0, -589809, 12, 0, -589808, 12, 0, -589807, 12, 0, -589806, 12, 0, -589805, 12, 0, -589804, 12, 0, -589803, 12, 0, -589802, 12, 0, -589801, 12, 0, -589800, 12, 0, -589799, 12, 0, -589798, 12, 0, -589797, 12, 0, -589796, 12, 0, -589795, 12, 0, -589794, 12, 0, -589793, 12, 0, -524278, 12, 0, -524277, 12, 0, -524276, 12, 0, -524275, 12, 0, -524274, 12, 0, -524273, 12, 0, -524272, 12, 0, -524271, 12, 0, -524270, 12, 0, -524269, 12, 0, -524268, 12, 0, -524267, 12, 0, -524266, 12, 0, -524265, 12, 0, -524264, 12, 0, -524263, 12, 0, -524262, 12, 0, -524261, 12, 0, -524260, 12, 0, -524259, 12, 0, -524258, 12, 0, -524257, 12, 0, -524256, 12, 0, -524255, 12, 0, -458741, 12, 0, -458740, 12, 0, -458739, 12, 0, -458738, 12, 0, -458737, 12, 0, -458736, 12, 0, -458735, 12, 0, -458734, 12, 0, -458733, 12, 0, -458732, 12, 0, -458731, 12, 0, -458730, 12, 0, -458729, 12, 0, -458728, 12, 0, -458727, 12, 0, -458726, 12, 0, -458725, 12, 0, -458724, 12, 0, -458723, 12, 0, -458722, 12, 0, -458721, 12, 0, -458720, 12, 0, -458719, 12, 0, -393204, 12, 0, -393203, 12, 0, -393202, 12, 0, -393201, 12, 0, -393200, 12, 0, -393199, 12, 0, -393198, 12, 0, -393197, 12, 0, -393196, 12, 0, -393195, 12, 0, -393194, 12, 0, -393193, 12, 0, -393192, 12, 0, -393191, 12, 0, -393190, 12, 0, -393189, 12, 0, -393188, 12, 0, -393187, 12, 0, -393186, 12, 0, -393185, 12, 0, -393184, 12, 0, -393183, 12, 0, -393182, 12, 0, -327667, 12, 0, -327666, 12, 0, -327665, 12, 0, -327664, 12, 0, -327663, 12, 0, -327662, 12, 0, -327661, 12, 0, -327660, 12, 0, -327659, 12, 0, -327658, 12, 0, -327657, 12, 0, -327656, 12, 0, -327655, 12, 0, -327654, 12, 0, -327653, 12, 0, -327652, 12, 0, -327651, 12, 0, -327650, 12, 0, -327649, 12, 0, -327648, 12, 0, -327647, 12, 0, -327646, 12, 0, -327645, 12, 0, -262130, 12, 0, -262129, 12, 0, -262128, 12, 0, -262127, 12, 0, -262126, 12, 0, -262125, 12, 0, -262124, 12, 0, -262123, 12, 0, -262122, 12, 0, -262121, 12, 0, -262120, 12, 0, -262119, 12, 0, -262118, 12, 0, -262117, 12, 0, -262116, 12, 0, -262115, 12, 0, -262114, 12, 0, -262113, 12, 0, -262112, 12, 0, -262111, 12, 0, -262110, 12, 0, -262109, 12, 0, -262108, 12, 0, -196593, 12, 0, -196592, 12, 0, -196591, 12, 0, -196590, 12, 0, -196589, 12, 0, -196588, 12, 0, -196587, 12, 0, -196586, 12, 0, -196585, 12, 0, -196584, 12, 0, -196583, 12, 0, -196582, 12, 0, -196581, 12, 0, -196580, 12, 0, -196579, 12, 0, -196578, 12, 0, -196577, 12, 0, -196576, 12, 0, -196575, 12, 0, -196574, 12, 0, -196573, 12, 0, -196572, 12, 0, -196571, 12, 0, -131056, 12, 0, -131055, 12, 0, -131054, 12, 0, -131053, 12, 0, -131052, 12, 0, -131051, 12, 0, -131050, 12, 0, -131049, 12, 0, -131048, 12, 0, -131047, 12, 0, -131046, 12, 0, -131045, 12, 0, -131044, 12, 0, -131043, 12, 0, -131042, 12, 0, -131041, 12, 0, -131040, 12, 0, -131039, 12, 0, -131038, 12, 0, -131037, 12, 0, -131036, 12, 0, -131035, 12, 0, -131034, 12, 0, -65519, 12, 0, -65518, 12, 0, -65517, 12, 0, -65516, 12, 0, -65515, 12, 0, -65514, 12, 0, -65513, 12, 0, -65512, 12, 0, -65511, 12, 0, -65510, 12, 0, -65509, 12, 0, -65508, 12, 0, -65507, 12, 0, -65506, 12, 0, -65505, 12, 0, -65504, 12, 0, -65503, 12, 0, -65502, 12, 0, -65501, 12, 0, -65500, 12, 0, -65499, 12, 0, -65498, 12, 0, -65497, 12, 0, 18, 12, 0, 19, 12, 0, 20, 12, 0, 21, 12, 0, 22, 12, 0, 23, 12, 0, 24, 12, 0, 25, 12, 0, 26, 12, 0, 27, 12, 0, 28, 12, 0, 29, 12, 0, 30, 12, 0, 31, 12, 0, 32, 12, 0, 33, 12, 0, 34, 12, 0, 35, 12, 0, 36, 12, 0, 37, 12, 0, 38, 12, 0, 39, 12, 0, 40, 12, 0, 65555, 12, 0, 65556, 12, 0, 65557, 12, 0, 65558, 12, 0, 65559, 12, 0, 65560, 12, 0, 65561, 12, 0, 65562, 12, 0, 65563, 12, 0, 65564, 12, 0, 65565, 12, 0, 65566, 12, 0, 65567, 12, 0, 65568, 12, 0, 65569, 12, 0, 65570, 12, 0, 65571, 12, 0, 65572, 12, 0, 65573, 12, 0, 65574, 12, 0, 65575, 12, 0, 65576, 12, 0, 65577, 12, 0, 131092, 12, 0, 131093, 12, 0, 131094, 12, 0, 131095, 12, 0, 131096, 12, 0, 131097, 12, 0, 131098, 12, 0, 131099, 12, 0, 131100, 12, 0, 131101, 12, 0, 131102, 12, 0, 131103, 12, 0, 131104, 12, 0, 131105, 12, 0, 131106, 12, 0, 131107, 12, 0, 131108, 12, 0, 131109, 12, 0, 131110, 12, 0, 131111, 12, 0, 131112, 12, 0, 131113, 12, 0, 131114, 12, 0, 196629, 12, 0, 196630, 12, 0, 196631, 12, 0, 196632, 12, 0, 196633, 12, 0, 196634, 12, 0, 196635, 12, 0, 196636, 12, 0, 196637, 12, 0, 196638, 12, 0, 196639, 12, 0, 196640, 12, 0, 196641, 12, 0, 196642, 12, 0, 196643, 12, 0, 196644, 12, 0, 196645, 12, 0, 196646, 12, 0, 196647, 12, 0, 196648, 12, 0, 196649, 12, 0, 196650, 12, 0, 262165, 12, 0, 262166, 12, 0, 262167, 12, 0, 262168, 12, 0, 262169, 12, 0, 262170, 12, 0, 262171, 12, 0, 262172, 12, 0, 262173, 12, 0, 262174, 12, 0, 262175, 12, 0, 262176, 12, 0, 262177, 12, 0, 262178, 12, 0, 262179, 12, 0, 262180, 12, 0, 262181, 12, 0, 262182, 12, 0, 262183, 12, 0, 262184, 12, 0, 327703, 12, 0, 327704, 12, 0, 327705, 12, 0, 327706, 12, 0, 327707, 12, 0, 327708, 12, 0, 327709, 12, 0, 327710, 12, 0, 327711, 12, 0, 327712, 12, 0, 327713, 12, 0, 327714, 12, 0, 327715, 12, 0, 327716, 12, 0, 327717, 12, 0, 327718, 12, 0, 327719, 12, 0, 393239, 12, 0, 393240, 12, 0, 393241, 12, 0, 393242, 12, 0, 393243, 12, 0, 393244, 12, 0, 393245, 12, 0, 393246, 12, 0, 393247, 12, 0, 393248, 12, 0, 393249, 12, 0, 393250, 12, 0, 393251, 12, 0, 393252, 12, 0, 393253, 12, 0, 393254, 12, 0, 458776, 12, 0, 458777, 12, 0, 458778, 12, 0, 458779, 12, 0, 458780, 12, 0, 458781, 12, 0, 458782, 12, 0, 458783, 12, 0, 458784, 12, 0, 458785, 12, 0, 458786, 12, 0, 458787, 12, 0, 458788, 12, 0, 458789, 12, 0, 524314, 12, 0, 524315, 12, 0, 524316, 12, 0, 524317, 12, 0, 524318, 12, 0, 524319, 12, 0, 524320, 12, 0, 524321, 12, 0, 524322, 12, 0, 524323, 12, 0, 524324, 12, 0, 524325, 12, 0, 589851, 12, 0, 589852, 12, 0, 589853, 12, 0, 589854, 12, 0, 589855, 12, 0, 589856, 12, 0, 589857, 12, 0, 589858, 12, 0, 589859, 12, 0, 589860, 12, 0, 655388, 12, 0, 655389, 12, 0, 655390, 12, 0, 655391, 12, 0, 655392, 12, 0, 655393, 12, 0, 655394, 12, 0, 655395, 12, 0, 720925, 12, 0, 720926, 12, 0, 720927, 12, 0, 720928, 12, 0, 720929, 12, 0, 720930, 12, 0, 786461, 12, 0, 786462, 12, 0, 786463, 12, 0, 786464, 12, 0, 851996, 12, 0, 851998, 12, 0, 851999, 12, 0, 852000, 12, 0, 917531, 12, 0, 917533, 12, 0, 917534, 12, 0, 917536, 12, 0, 983067, 12, 0, 983068, 12, 0, 983069, 12, 0, 1048602, 12, 0, 1048603, 12, 0, 1048604, 12, 0, 1114138, 12, 0, 1114139, 12, 0, 1179670, 12, 0, 1179673, 12, 0, 1179674, 12, 0, 1245206, 12, 0, 1245207, 12, 0, 1245208, 12, 0, 1245209, 12, 0, 1245210, 12, 0, 1310743, 12, 0, 1310744, 12, 0, 1310745, 12, 0, 1376278, 12, 0, 1376279, 12, 0, 1441813, 12, 0, 1441814, 12, 0, 1441815, 12, 0, 1507349, 12, 0, 1507350, 12, 0, 1507351, 12, 0 )
+
+[node name="Control_Title" type="Control" parent="."]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite_background" type="Sprite" parent="Control_Title"]
+visible = false
+position = Vector2( 353.696, 228.796 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TabContainer" type="TabContainer" parent="Control_Title"]
+editor/display_folded = true
+margin_top = -32.0
+margin_right = 594.0
+margin_bottom = 368.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_bg = Color( 0, 0, 0, 1 )
+
+[node name="Tab_0_Mode" type="Tabs" parent="Control_Title/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" parent="Control_Title/TabContainer/Tab_0_Mode" instance=ExtResource( 4 )]
+margin_top = 94.0
+margin_bottom = 702.0
+theme = SubResource( 1 )
+
+[node name="Tab_1_Settngs" type="Tabs" parent="Control_Title/TabContainer"]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Panel" parent="Control_Title/TabContainer/Tab_1_Settngs" instance=ExtResource( 5 )]
+
+[node name="CheckButton_Music" type="CheckButton" parent="Control_Title/TabContainer/Tab_1_Settngs/Panel"]
+margin_right = 76.0
+margin_bottom = 40.0
+pressed = true
+
+[node name="Label" type="Label" parent="Control_Title/TabContainer/Tab_1_Settngs/Panel/CheckButton_Music"]
+margin_left = 76.0
+margin_top = 16.0
+margin_right = 226.0
+margin_bottom = 30.0
+text = "...........................MUSIC"
+align = 1
+
+[node name="HSlider_Volume" type="HSlider" parent="Control_Title/TabContainer/Tab_1_Settngs/Panel"]
+margin_left = 16.0
+margin_top = 40.0
+margin_right = 208.0
+margin_bottom = 72.0
+ticks_on_borders = true
+
+[node name="Tab_2_Credits" type="Tabs" parent="Control_Title/TabContainer"]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Panel" parent="Control_Title/TabContainer/Tab_2_Credits" instance=ExtResource( 5 )]
+
+[node name="Label" type="Label" parent="Control_Title/TabContainer/Tab_2_Credits/Panel"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 576.0
+margin_bottom = 584.0
+custom_fonts/font = SubResource( 2 )
+text = "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Tab_3_Help" type="Tabs" parent="Control_Title/TabContainer"]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Panel" parent="Control_Title/TabContainer/Tab_3_Help" instance=ExtResource( 5 )]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control_Title/TabContainer/Tab_3_Help/Panel"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 576.0
+margin_bottom = 584.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control_Title/TabContainer/Tab_3_Help/Panel/ScrollContainer"]
+margin_right = 560.0
+margin_bottom = 864.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="Control_Title/TabContainer/Tab_3_Help/Panel/ScrollContainer/VBoxContainer"]
+margin_right = 548.0
+margin_bottom = 864.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "
+What is Lorem Ipsum?
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Why do we use it?
+
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+Where does it come from?
+
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.
+
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+Where can I get some?
+
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="TextureButton_House" parent="Control_Title" instance=ExtResource( 7 )]
+
+[node name="TextureButton_Settings" parent="Control_Title" instance=ExtResource( 8 )]
+
+[node name="TextureButton_Credits" parent="Control_Title" instance=ExtResource( 9 )]
+margin_left = 176.0
+margin_top = 16.0
+margin_right = 240.0
+margin_bottom = 80.0
+
+[node name="TextureButton_Help" parent="Control_Title" instance=ExtResource( 10 )]
+margin_left = 256.0
+margin_top = 16.0
+margin_right = 320.0
+margin_bottom = 80.0
+
+[node name="TextureButton_Quit" parent="Control_Title" instance=ExtResource( 11 )]
+margin_left = 336.0
+margin_top = 16.0
+margin_right = 400.0
+margin_bottom = 80.0
+
+[node name="Panel" parent="Control_Title" instance=ExtResource( 5 )]
+editor/display_folded = true
+margin_left = 624.0
+margin_right = 1248.0
+
+[node name="Panel" type="Panel" parent="Control_Title/Panel"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 608.0
+margin_bottom = 208.0
+
+[node name="Label" type="Label" parent="Control_Title/Panel/Panel"]
+margin_right = 576.0
+margin_bottom = 192.0
+grow_horizontal = 0
+text = "Is there a way to close a game using GDscript?
+I'm trying to use the texture button as the exit button and I wanted to close the game without using the close button like the me.close() in Visual Basic. Or am I doing it wrong?"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Panel2" type="Panel" parent="Control_Title/Panel"]
+margin_left = 16.0
+margin_top = 216.0
+margin_right = 312.0
+margin_bottom = 312.0
+
+[node name="Panel3" type="Panel" parent="Control_Title/Panel"]
+margin_left = 16.0
+margin_top = 416.0
+margin_right = 312.0
+margin_bottom = 512.0
+
+[node name="Control_Game" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 12 )
+
+[node name="TabContainer" type="TabContainer" parent="Control_Game"]
+margin_left = 16.0
+margin_top = 96.0
+margin_right = 624.0
+margin_bottom = 704.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Results" type="Tabs" parent="Control_Game/TabContainer"]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Panel" type="Panel" parent="Control_Game/TabContainer/Results"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 584.0
+margin_bottom = 416.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label_Performance" type="Label" parent="Control_Game/TabContainer/Results/Panel"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 16.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "Performance:"
+
+[node name="Label_ProductSold" type="Label" parent="Control_Game/TabContainer/Results/Panel/Label_Performance"]
+margin_top = 16.0
+margin_right = 40.0
+margin_bottom = 30.0
+text = "Product Sold : "
+
+[node name="Label" type="Label" parent="Control_Game/TabContainer/Results/Panel/Label_Performance/Label_ProductSold"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 108.0
+margin_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+
+[node name="Label_SeriveRate" type="Label" parent="Control_Game/TabContainer/Results/Panel/Label_Performance"]
+margin_top = 268.0
+margin_right = 92.0
+margin_bottom = 282.0
+text = "ServiceRate"
+
+[node name="Label" type="Label" parent="Control_Game/TabContainer/Results/Panel/Label_Performance/Label_SeriveRate"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 108.0
+margin_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+
+[node name="Label_Popularity" type="Label" parent="Control_Game/TabContainer/Results/Panel/Label_Performance"]
+margin_left = 160.0
+margin_top = 268.0
+margin_right = 252.0
+margin_bottom = 282.0
+text = "Popularity"
+
+[node name="Label" type="Label" parent="Control_Game/TabContainer/Results/Panel/Label_Performance/Label_Popularity"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 108.0
+margin_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+
+[node name="Label_SpawnRate" type="Label" parent="Control_Game/TabContainer/Results/Panel/Label_Performance"]
+margin_top = 144.0
+margin_right = 92.0
+margin_bottom = 158.0
+text = "SpawnRate"
+
+[node name="Label" type="Label" parent="Control_Game/TabContainer/Results/Panel/Label_Performance/Label_SpawnRate"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 108.0
+margin_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+
+[node name="Label_DayLeft" type="Label" parent="Control_Game/TabContainer/Results/Panel/Label_Performance"]
+margin_top = 208.0
+margin_right = 92.0
+margin_bottom = 222.0
+text = "Dayleft : "
+
+[node name="Label" type="Label" parent="Control_Game/TabContainer/Results/Panel/Label_Performance/Label_DayLeft"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 108.0
+margin_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+
+[node name="Label_ProductOneDay" type="Label" parent="Control_Game/TabContainer/Results/Panel/Label_Performance"]
+margin_top = 80.0
+margin_right = 92.0
+margin_bottom = 94.0
+text = " Product yesterday :"
+
+[node name="Label" type="Label" parent="Control_Game/TabContainer/Results/Panel/Label_Performance/Label_ProductOneDay"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 108.0
+margin_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+
+[node name="HSlider_servicetime" type="HSlider" parent="Control_Game/TabContainer/Results/Panel"]
+margin_left = 128.0
+margin_top = 64.0
+margin_right = 256.0
+margin_bottom = 80.0
+max_value = 5.0
+step = 0.1
+value = 2.5
+ticks_on_borders = true
+
+[node name="Label" type="Label" parent="Control_Game/TabContainer/Results/Panel/HSlider_servicetime"]
+margin_top = -32.0
+margin_right = 40.0
+margin_bottom = -18.0
+text = "sevicetime	"
+
+[node name="Label2" type="Label" parent="Control_Game/TabContainer/Results/Panel/HSlider_servicetime"]
+margin_top = 16.0
+margin_right = 40.0
+margin_bottom = 30.0
+
+[node name="Location" type="Tabs" parent="Control_Game/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Upgrades" type="Tabs" parent="Control_Game/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+script = ExtResource( 13 )
+
+[node name="Panel" type="Panel" parent="Control_Game/TabContainer/Upgrades"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 584.0
+margin_bottom = 416.0
+
+[node name="Right" parent="Control_Game/TabContainer/Upgrades" instance=ExtResource( 14 )]
+margin_left = 520.0
+margin_top = 168.0
+margin_right = 584.0
+margin_bottom = 232.0
+
+[node name="Left" parent="Control_Game/TabContainer/Upgrades" instance=ExtResource( 15 )]
+margin_left = 16.0
+margin_top = 168.0
+margin_right = 80.0
+margin_bottom = 232.0
+
+[node name="Button_Confirm" type="Button" parent="Control_Game/TabContainer/Upgrades"]
+margin_left = 456.0
+margin_top = 498.0
+margin_right = 568.0
+margin_bottom = 546.0
+text = "Confirm"
+
+[node name="Staff" type="Tabs" parent="Control_Game/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Marketing" type="Tabs" parent="Control_Game/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+script = ExtResource( 16 )
+
+[node name="Panel_Paper" type="Panel" parent="Control_Game/TabContainer/Marketing"]
+editor/display_folded = true
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 80.0
+margin_bottom = 80.0
+
+[node name="Sprite" parent="Control_Game/TabContainer/Marketing/Panel_Paper" instance=ExtResource( 17 )]
+
+[node name="Label" type="Label" parent="Control_Game/TabContainer/Marketing/Panel_Paper"]
+margin_left = 128.0
+margin_right = 256.0
+margin_bottom = 64.0
+
+[node name="CheckBox" type="CheckBox" parent="Control_Game/TabContainer/Marketing/Panel_Paper"]
+margin_left = 256.0
+margin_top = 16.0
+margin_right = 280.0
+margin_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 2, 2 )
+pressed = true
+
+[node name="Panel_Internet" type="Panel" parent="Control_Game/TabContainer/Marketing"]
+editor/display_folded = true
+margin_left = 16.0
+margin_top = 416.0
+margin_right = 80.0
+margin_bottom = 480.0
+
+[node name="Sprite" parent="Control_Game/TabContainer/Marketing/Panel_Internet" instance=ExtResource( 18 )]
+
+[node name="Label" type="Label" parent="Control_Game/TabContainer/Marketing/Panel_Internet"]
+margin_left = 128.0
+margin_right = 256.0
+margin_bottom = 64.0
+
+[node name="CheckBox" type="CheckBox" parent="Control_Game/TabContainer/Marketing/Panel_Internet"]
+margin_left = 256.0
+margin_top = 16.0
+margin_right = 280.0
+margin_bottom = 40.0
+rect_scale = Vector2( 2, 2 )
+pressed = true
+
+[node name="Panel_Billboard" type="Panel" parent="Control_Game/TabContainer/Marketing"]
+editor/display_folded = true
+margin_left = 16.0
+margin_top = 336.0
+margin_right = 80.0
+margin_bottom = 400.0
+
+[node name="Sprite" parent="Control_Game/TabContainer/Marketing/Panel_Billboard" instance=ExtResource( 19 )]
+
+[node name="Label" type="Label" parent="Control_Game/TabContainer/Marketing/Panel_Billboard"]
+margin_left = 128.0
+margin_right = 256.0
+margin_bottom = 64.0
+
+[node name="CheckBox" type="CheckBox" parent="Control_Game/TabContainer/Marketing/Panel_Billboard"]
+margin_left = 256.0
+margin_top = 16.0
+margin_right = 280.0
+margin_bottom = 40.0
+rect_scale = Vector2( 2, 2 )
+pressed = true
+
+[node name="Panel_Mail" type="Panel" parent="Control_Game/TabContainer/Marketing"]
+editor/display_folded = true
+margin_left = 16.0
+margin_top = 256.0
+margin_right = 80.0
+margin_bottom = 320.0
+
+[node name="Sprite" parent="Control_Game/TabContainer/Marketing/Panel_Mail" instance=ExtResource( 20 )]
+
+[node name="Label" type="Label" parent="Control_Game/TabContainer/Marketing/Panel_Mail"]
+margin_left = 128.0
+margin_right = 256.0
+margin_bottom = 64.0
+
+[node name="CheckBox" type="CheckBox" parent="Control_Game/TabContainer/Marketing/Panel_Mail"]
+margin_left = 256.0
+margin_top = 16.0
+margin_right = 280.0
+margin_bottom = 40.0
+rect_scale = Vector2( 2, 2 )
+pressed = true
+
+[node name="Panel_Radio" type="Panel" parent="Control_Game/TabContainer/Marketing"]
+editor/display_folded = true
+margin_left = 16.0
+margin_top = 96.0
+margin_right = 80.0
+margin_bottom = 160.0
+
+[node name="Sprite" parent="Control_Game/TabContainer/Marketing/Panel_Radio" instance=ExtResource( 21 )]
+
+[node name="Label" type="Label" parent="Control_Game/TabContainer/Marketing/Panel_Radio"]
+margin_left = 128.0
+margin_right = 256.0
+margin_bottom = 64.0
+
+[node name="CheckBox" type="CheckBox" parent="Control_Game/TabContainer/Marketing/Panel_Radio"]
+margin_left = 256.0
+margin_top = 16.0
+margin_right = 280.0
+margin_bottom = 40.0
+rect_scale = Vector2( 2, 2 )
+pressed = true
+
+[node name="Panel_TV" type="Panel" parent="Control_Game/TabContainer/Marketing"]
+margin_left = 16.0
+margin_top = 176.0
+margin_right = 80.0
+margin_bottom = 240.0
+
+[node name="Sprite" parent="Control_Game/TabContainer/Marketing/Panel_TV" instance=ExtResource( 22 )]
+
+[node name="Label" type="Label" parent="Control_Game/TabContainer/Marketing/Panel_TV"]
+margin_left = 128.0
+margin_right = 256.0
+margin_bottom = 64.0
+
+[node name="CheckBox" type="CheckBox" parent="Control_Game/TabContainer/Marketing/Panel_TV"]
+margin_left = 256.0
+margin_top = 16.0
+margin_right = 280.0
+margin_bottom = 40.0
+rect_scale = Vector2( 2, 2 )
+pressed = true
+
+[node name="Button_Confirm" type="Button" parent="Control_Game/TabContainer/Marketing"]
+margin_left = 456.0
+margin_top = 498.0
+margin_right = 568.0
+margin_bottom = 546.0
+text = "Confirm"
+
+[node name="Recipe" type="Tabs" parent="Control_Game/TabContainer"]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+script = ExtResource( 23 )
+
+[node name="Panel_Channa" type="Panel" parent="Control_Game/TabContainer/Recipe"]
+editor/display_folded = true
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 584.0
+margin_bottom = 112.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Right_Channa" parent="Control_Game/TabContainer/Recipe/Panel_Channa" instance=ExtResource( 14 )]
+margin_left = 96.0
+margin_top = 16.0
+margin_right = 160.0
+margin_bottom = 80.0
+
+[node name="Left_Channa" parent="Control_Game/TabContainer/Recipe/Panel_Channa" instance=ExtResource( 15 )]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 80.0
+margin_bottom = 80.0
+
+[node name="Sprite_Channa" parent="Control_Game/TabContainer/Recipe/Panel_Channa" instance=ExtResource( 24 )]
+position = Vector2( 208, 16 )
+scale = Vector2( 1, 1 )
+
+[node name="Panel_Bhara" type="Panel" parent="Control_Game/TabContainer/Recipe"]
+editor/display_folded = true
+margin_left = 16.0
+margin_top = 128.0
+margin_right = 584.0
+margin_bottom = 224.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Right_Bhara" parent="Control_Game/TabContainer/Recipe/Panel_Bhara" instance=ExtResource( 14 )]
+margin_left = 96.0
+margin_top = 16.0
+margin_right = 160.0
+margin_bottom = 80.0
+
+[node name="Left_Bhara" parent="Control_Game/TabContainer/Recipe/Panel_Bhara" instance=ExtResource( 15 )]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 80.0
+margin_bottom = 80.0
+
+[node name="Sprite_Bhara" parent="Control_Game/TabContainer/Recipe/Panel_Bhara" instance=ExtResource( 25 )]
+position = Vector2( 192, 16 )
+scale = Vector2( 1, 1 )
+
+[node name="Panel_Chutney" type="Panel" parent="Control_Game/TabContainer/Recipe"]
+editor/display_folded = true
+margin_left = 16.0
+margin_top = 240.0
+margin_right = 584.0
+margin_bottom = 336.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Right_Chutney" parent="Control_Game/TabContainer/Recipe/Panel_Chutney" instance=ExtResource( 14 )]
+margin_left = 96.0
+margin_top = 16.0
+margin_right = 160.0
+margin_bottom = 80.0
+
+[node name="Left_Chutney" parent="Control_Game/TabContainer/Recipe/Panel_Chutney" instance=ExtResource( 15 )]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 80.0
+margin_bottom = 80.0
+
+[node name="Sprite_Chutney" parent="Control_Game/TabContainer/Recipe/Panel_Chutney" instance=ExtResource( 26 )]
+position = Vector2( 192, 16 )
+scale = Vector2( 1, 1 )
+
+[node name="Panel_Drinks" type="Panel" parent="Control_Game/TabContainer/Recipe"]
+editor/display_folded = true
+margin_left = 16.0
+margin_top = 352.0
+margin_right = 584.0
+margin_bottom = 448.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Right_Drinks" parent="Control_Game/TabContainer/Recipe/Panel_Drinks" instance=ExtResource( 14 )]
+margin_left = 96.0
+margin_top = 16.0
+margin_right = 160.0
+margin_bottom = 80.0
+
+[node name="Left_Drinks" parent="Control_Game/TabContainer/Recipe/Panel_Drinks" instance=ExtResource( 15 )]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 80.0
+margin_bottom = 80.0
+
+[node name="Sprite_Drinks" parent="Control_Game/TabContainer/Recipe/Panel_Drinks" instance=ExtResource( 27 )]
+position = Vector2( 192, 16 )
+scale = Vector2( 1, 1 )
+
+[node name="Button_Confirm" type="Button" parent="Control_Game/TabContainer/Recipe"]
+margin_left = 456.0
+margin_top = 498.0
+margin_right = 568.0
+margin_bottom = 546.0
+text = "Confirm"
+
+[node name="Supplies" type="Tabs" parent="Control_Game/TabContainer"]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="TabContainer" type="TabContainer" parent="Control_Game/TabContainer/Supplies"]
+margin_left = 16.0
+margin_right = 592.0
+margin_bottom = 500.0
+
+[node name="Channa" type="Tabs" parent="Control_Game/TabContainer/Supplies/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+script = ExtResource( 28 )
+
+[node name="Left_1" parent="Control_Game/TabContainer/Supplies/TabContainer/Channa" instance=ExtResource( 15 )]
+
+[node name="Left_10" parent="Control_Game/TabContainer/Supplies/TabContainer/Channa" instance=ExtResource( 15 )]
+margin_top = 128.0
+margin_bottom = 192.0
+
+[node name="Left_100" parent="Control_Game/TabContainer/Supplies/TabContainer/Channa" instance=ExtResource( 15 )]
+margin_top = 192.0
+margin_bottom = 256.0
+
+[node name="Left_1000" parent="Control_Game/TabContainer/Supplies/TabContainer/Channa" instance=ExtResource( 15 )]
+margin_top = 256.0
+margin_bottom = 320.0
+
+[node name="Right_1" parent="Control_Game/TabContainer/Supplies/TabContainer/Channa" instance=ExtResource( 14 )]
+margin_left = 256.0
+margin_right = 320.0
+
+[node name="Right_10" parent="Control_Game/TabContainer/Supplies/TabContainer/Channa" instance=ExtResource( 14 )]
+margin_left = 256.0
+margin_top = 128.0
+margin_right = 320.0
+margin_bottom = 192.0
+
+[node name="Right_100" parent="Control_Game/TabContainer/Supplies/TabContainer/Channa" instance=ExtResource( 14 )]
+margin_left = 256.0
+margin_top = 192.0
+margin_right = 320.0
+margin_bottom = 256.0
+
+[node name="Right_1000" parent="Control_Game/TabContainer/Supplies/TabContainer/Channa" instance=ExtResource( 14 )]
+margin_left = 256.0
+margin_top = 256.0
+margin_right = 320.0
+margin_bottom = 320.0
+
+[node name="Label_1" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Channa"]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 256.0
+margin_bottom = 128.0
+custom_fonts/font = ExtResource( 29 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Label_1_Total" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Channa"]
+margin_left = 384.0
+margin_top = 64.0
+margin_right = 576.0
+margin_bottom = 128.0
+custom_fonts/font = ExtResource( 29 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Label_10_Total" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Channa"]
+margin_left = 384.0
+margin_top = 128.0
+margin_right = 576.0
+margin_bottom = 192.0
+custom_fonts/font = ExtResource( 29 )
+text = "10	"
+align = 1
+valign = 1
+
+[node name="Label_100_Total" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Channa"]
+margin_left = 384.0
+margin_top = 192.0
+margin_right = 576.0
+margin_bottom = 256.0
+custom_fonts/font = ExtResource( 29 )
+text = "100	"
+align = 1
+valign = 1
+
+[node name="Label_1000_Total" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Channa"]
+margin_left = 384.0
+margin_top = 256.0
+margin_right = 576.0
+margin_bottom = 320.0
+custom_fonts/font = ExtResource( 29 )
+text = "1000"
+align = 1
+valign = 1
+
+[node name="Label_Total_Total" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Channa"]
+margin_left = 384.0
+margin_top = 320.0
+margin_right = 576.0
+margin_bottom = 384.0
+grow_horizontal = 0
+size_flags_horizontal = 11
+size_flags_vertical = 8
+custom_fonts/font = ExtResource( 29 )
+text = "1000"
+align = 1
+valign = 1
+
+[node name="Label_Total_Items" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Channa"]
+margin_top = 320.0
+margin_right = 192.0
+margin_bottom = 384.0
+grow_horizontal = 0
+size_flags_horizontal = 11
+size_flags_vertical = 8
+custom_fonts/font = ExtResource( 29 )
+text = "1000"
+align = 1
+valign = 1
+
+[node name="Label_10" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Channa"]
+margin_left = 64.0
+margin_top = 128.0
+margin_right = 256.0
+margin_bottom = 192.0
+custom_fonts/font = ExtResource( 29 )
+text = "10	"
+align = 1
+valign = 1
+
+[node name="Label_100" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Channa"]
+margin_left = 64.0
+margin_top = 192.0
+margin_right = 256.0
+margin_bottom = 256.0
+custom_fonts/font = ExtResource( 29 )
+text = "100"
+align = 1
+valign = 1
+
+[node name="Label_1000" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Channa"]
+margin_left = 64.0
+margin_top = 256.0
+margin_right = 256.0
+margin_bottom = 320.0
+custom_fonts/font = ExtResource( 29 )
+text = "1000	"
+align = 1
+valign = 1
+
+[node name="Confirm" type="Button" parent="Control_Game/TabContainer/Supplies/TabContainer/Channa"]
+margin_left = 416.0
+margin_top = 388.0
+margin_right = 544.0
+margin_bottom = 452.0
+text = "Confirm"
+
+[node name="Label_Cost" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Channa"]
+margin_left = 16.0
+margin_right = 147.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 29 )
+text = "Cost :"
+align = 1
+valign = 1
+
+[node name="Label_Cost2" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Channa"]
+margin_left = 163.0
+margin_right = 294.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 29 )
+text = "Cost :"
+align = 1
+valign = 1
+
+[node name="Bhara" type="Tabs" parent="Control_Game/TabContainer/Supplies/TabContainer"]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+script = ExtResource( 30 )
+
+[node name="Left_1" parent="Control_Game/TabContainer/Supplies/TabContainer/Bhara" instance=ExtResource( 15 )]
+
+[node name="Left_10" parent="Control_Game/TabContainer/Supplies/TabContainer/Bhara" instance=ExtResource( 15 )]
+margin_top = 128.0
+margin_bottom = 192.0
+
+[node name="Left_100" parent="Control_Game/TabContainer/Supplies/TabContainer/Bhara" instance=ExtResource( 15 )]
+margin_top = 192.0
+margin_bottom = 256.0
+
+[node name="Left_1000" parent="Control_Game/TabContainer/Supplies/TabContainer/Bhara" instance=ExtResource( 15 )]
+margin_top = 256.0
+margin_bottom = 320.0
+
+[node name="Right_1" parent="Control_Game/TabContainer/Supplies/TabContainer/Bhara" instance=ExtResource( 14 )]
+margin_left = 256.0
+margin_right = 320.0
+
+[node name="Right_10" parent="Control_Game/TabContainer/Supplies/TabContainer/Bhara" instance=ExtResource( 14 )]
+margin_left = 256.0
+margin_top = 128.0
+margin_right = 320.0
+margin_bottom = 192.0
+
+[node name="Right_100" parent="Control_Game/TabContainer/Supplies/TabContainer/Bhara" instance=ExtResource( 14 )]
+margin_left = 256.0
+margin_top = 192.0
+margin_right = 320.0
+margin_bottom = 256.0
+
+[node name="Right_1000" parent="Control_Game/TabContainer/Supplies/TabContainer/Bhara" instance=ExtResource( 14 )]
+margin_left = 256.0
+margin_top = 256.0
+margin_right = 320.0
+margin_bottom = 320.0
+
+[node name="Label_1" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Bhara"]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 256.0
+margin_bottom = 128.0
+custom_fonts/font = ExtResource( 29 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Label_1_Total" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Bhara"]
+margin_left = 384.0
+margin_top = 64.0
+margin_right = 576.0
+margin_bottom = 128.0
+custom_fonts/font = ExtResource( 29 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Label_10_Total" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Bhara"]
+margin_left = 384.0
+margin_top = 128.0
+margin_right = 576.0
+margin_bottom = 192.0
+custom_fonts/font = ExtResource( 29 )
+text = "10	"
+align = 1
+valign = 1
+
+[node name="Label_100_Total" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Bhara"]
+margin_left = 384.0
+margin_top = 192.0
+margin_right = 576.0
+margin_bottom = 256.0
+custom_fonts/font = ExtResource( 29 )
+text = "100	"
+align = 1
+valign = 1
+
+[node name="Label_1000_Total" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Bhara"]
+margin_left = 384.0
+margin_top = 256.0
+margin_right = 576.0
+margin_bottom = 320.0
+custom_fonts/font = ExtResource( 29 )
+text = "1000"
+align = 1
+valign = 1
+
+[node name="Label_Total_Total" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Bhara"]
+margin_left = 384.0
+margin_top = 320.0
+margin_right = 576.0
+margin_bottom = 384.0
+grow_horizontal = 0
+size_flags_horizontal = 11
+size_flags_vertical = 8
+custom_fonts/font = ExtResource( 29 )
+text = "1000"
+align = 1
+valign = 1
+
+[node name="Label_Total_Items" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Bhara"]
+margin_top = 320.0
+margin_right = 192.0
+margin_bottom = 384.0
+grow_horizontal = 0
+size_flags_horizontal = 11
+size_flags_vertical = 8
+custom_fonts/font = ExtResource( 29 )
+text = "1000"
+align = 1
+valign = 1
+
+[node name="Label_10" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Bhara"]
+margin_left = 64.0
+margin_top = 128.0
+margin_right = 256.0
+margin_bottom = 192.0
+custom_fonts/font = ExtResource( 29 )
+text = "10	"
+align = 1
+valign = 1
+
+[node name="Label_100" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Bhara"]
+margin_left = 64.0
+margin_top = 192.0
+margin_right = 256.0
+margin_bottom = 256.0
+custom_fonts/font = ExtResource( 29 )
+text = "100"
+align = 1
+valign = 1
+
+[node name="Label_1000" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Bhara"]
+margin_left = 64.0
+margin_top = 256.0
+margin_right = 256.0
+margin_bottom = 320.0
+custom_fonts/font = ExtResource( 29 )
+text = "1000	"
+align = 1
+valign = 1
+
+[node name="Confirm" type="Button" parent="Control_Game/TabContainer/Supplies/TabContainer/Bhara"]
+margin_left = 416.0
+margin_top = 388.0
+margin_right = 544.0
+margin_bottom = 452.0
+text = "Confirm"
+
+[node name="Label_Cost" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Bhara"]
+margin_left = 16.0
+margin_right = 147.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 29 )
+text = "Cost :"
+align = 1
+valign = 1
+
+[node name="Label_Cost2" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Bhara"]
+margin_left = 163.0
+margin_right = 294.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 29 )
+text = "Cost :"
+align = 1
+valign = 1
+
+[node name="Chutney" type="Tabs" parent="Control_Game/TabContainer/Supplies/TabContainer"]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+script = ExtResource( 31 )
+
+[node name="Left_1" parent="Control_Game/TabContainer/Supplies/TabContainer/Chutney" instance=ExtResource( 15 )]
+
+[node name="Left_10" parent="Control_Game/TabContainer/Supplies/TabContainer/Chutney" instance=ExtResource( 15 )]
+margin_top = 128.0
+margin_bottom = 192.0
+
+[node name="Left_100" parent="Control_Game/TabContainer/Supplies/TabContainer/Chutney" instance=ExtResource( 15 )]
+margin_top = 192.0
+margin_bottom = 256.0
+
+[node name="Left_1000" parent="Control_Game/TabContainer/Supplies/TabContainer/Chutney" instance=ExtResource( 15 )]
+margin_top = 256.0
+margin_bottom = 320.0
+
+[node name="Right_1" parent="Control_Game/TabContainer/Supplies/TabContainer/Chutney" instance=ExtResource( 14 )]
+margin_left = 256.0
+margin_right = 320.0
+
+[node name="Right_10" parent="Control_Game/TabContainer/Supplies/TabContainer/Chutney" instance=ExtResource( 14 )]
+margin_left = 256.0
+margin_top = 128.0
+margin_right = 320.0
+margin_bottom = 192.0
+
+[node name="Right_100" parent="Control_Game/TabContainer/Supplies/TabContainer/Chutney" instance=ExtResource( 14 )]
+margin_left = 256.0
+margin_top = 192.0
+margin_right = 320.0
+margin_bottom = 256.0
+
+[node name="Right_1000" parent="Control_Game/TabContainer/Supplies/TabContainer/Chutney" instance=ExtResource( 14 )]
+margin_left = 256.0
+margin_top = 256.0
+margin_right = 320.0
+margin_bottom = 320.0
+
+[node name="Label_1" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Chutney"]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 256.0
+margin_bottom = 128.0
+custom_fonts/font = ExtResource( 29 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Label_1_Total" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Chutney"]
+margin_left = 384.0
+margin_top = 64.0
+margin_right = 576.0
+margin_bottom = 128.0
+custom_fonts/font = ExtResource( 29 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Label_10_Total" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Chutney"]
+margin_left = 384.0
+margin_top = 128.0
+margin_right = 576.0
+margin_bottom = 192.0
+custom_fonts/font = ExtResource( 29 )
+text = "10	"
+align = 1
+valign = 1
+
+[node name="Label_100_Total" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Chutney"]
+margin_left = 384.0
+margin_top = 192.0
+margin_right = 576.0
+margin_bottom = 256.0
+custom_fonts/font = ExtResource( 29 )
+text = "100	"
+align = 1
+valign = 1
+
+[node name="Label_1000_Total" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Chutney"]
+margin_left = 384.0
+margin_top = 256.0
+margin_right = 576.0
+margin_bottom = 320.0
+custom_fonts/font = ExtResource( 29 )
+text = "1000"
+align = 1
+valign = 1
+
+[node name="Label_Total_Total" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Chutney"]
+margin_left = 384.0
+margin_top = 320.0
+margin_right = 576.0
+margin_bottom = 384.0
+grow_horizontal = 0
+size_flags_horizontal = 11
+size_flags_vertical = 8
+custom_fonts/font = ExtResource( 29 )
+text = "1000"
+align = 1
+valign = 1
+
+[node name="Label_Total_Items" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Chutney"]
+margin_top = 320.0
+margin_right = 192.0
+margin_bottom = 384.0
+grow_horizontal = 0
+size_flags_horizontal = 11
+size_flags_vertical = 8
+custom_fonts/font = ExtResource( 29 )
+text = "1000"
+align = 1
+valign = 1
+
+[node name="Label_10" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Chutney"]
+margin_left = 64.0
+margin_top = 128.0
+margin_right = 256.0
+margin_bottom = 192.0
+custom_fonts/font = ExtResource( 29 )
+text = "10	"
+align = 1
+valign = 1
+
+[node name="Label_100" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Chutney"]
+margin_left = 64.0
+margin_top = 192.0
+margin_right = 256.0
+margin_bottom = 256.0
+custom_fonts/font = ExtResource( 29 )
+text = "100"
+align = 1
+valign = 1
+
+[node name="Label_1000" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Chutney"]
+margin_left = 64.0
+margin_top = 256.0
+margin_right = 256.0
+margin_bottom = 320.0
+custom_fonts/font = ExtResource( 29 )
+text = "1000	"
+align = 1
+valign = 1
+
+[node name="Confirm" type="Button" parent="Control_Game/TabContainer/Supplies/TabContainer/Chutney"]
+margin_left = 416.0
+margin_top = 388.0
+margin_right = 544.0
+margin_bottom = 452.0
+text = "Confirm"
+
+[node name="Label_Cost" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Chutney"]
+margin_left = 16.0
+margin_right = 147.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 29 )
+text = "Cost :"
+align = 1
+valign = 1
+
+[node name="Label_Cost2" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Chutney"]
+margin_left = 163.0
+margin_right = 294.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 29 )
+text = "Cost :"
+align = 1
+valign = 1
+
+[node name="Drinks" type="Tabs" parent="Control_Game/TabContainer/Supplies/TabContainer"]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+script = ExtResource( 32 )
+
+[node name="Left_1" parent="Control_Game/TabContainer/Supplies/TabContainer/Drinks" instance=ExtResource( 15 )]
+
+[node name="Left_10" parent="Control_Game/TabContainer/Supplies/TabContainer/Drinks" instance=ExtResource( 15 )]
+margin_top = 128.0
+margin_bottom = 192.0
+
+[node name="Left_100" parent="Control_Game/TabContainer/Supplies/TabContainer/Drinks" instance=ExtResource( 15 )]
+margin_top = 192.0
+margin_bottom = 256.0
+
+[node name="Left_1000" parent="Control_Game/TabContainer/Supplies/TabContainer/Drinks" instance=ExtResource( 15 )]
+margin_top = 256.0
+margin_bottom = 320.0
+
+[node name="Right_1" parent="Control_Game/TabContainer/Supplies/TabContainer/Drinks" instance=ExtResource( 14 )]
+margin_left = 256.0
+margin_right = 320.0
+
+[node name="Right_10" parent="Control_Game/TabContainer/Supplies/TabContainer/Drinks" instance=ExtResource( 14 )]
+margin_left = 256.0
+margin_top = 128.0
+margin_right = 320.0
+margin_bottom = 192.0
+
+[node name="Right_100" parent="Control_Game/TabContainer/Supplies/TabContainer/Drinks" instance=ExtResource( 14 )]
+margin_left = 256.0
+margin_top = 192.0
+margin_right = 320.0
+margin_bottom = 256.0
+
+[node name="Right_1000" parent="Control_Game/TabContainer/Supplies/TabContainer/Drinks" instance=ExtResource( 14 )]
+margin_left = 256.0
+margin_top = 256.0
+margin_right = 320.0
+margin_bottom = 320.0
+
+[node name="Label_1" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Drinks"]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 256.0
+margin_bottom = 128.0
+custom_fonts/font = ExtResource( 29 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Label_1_Total" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Drinks"]
+margin_left = 384.0
+margin_top = 64.0
+margin_right = 576.0
+margin_bottom = 128.0
+custom_fonts/font = ExtResource( 29 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Label_10_Total" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Drinks"]
+margin_left = 384.0
+margin_top = 128.0
+margin_right = 576.0
+margin_bottom = 192.0
+custom_fonts/font = ExtResource( 29 )
+text = "10	"
+align = 1
+valign = 1
+
+[node name="Label_100_Total" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Drinks"]
+margin_left = 384.0
+margin_top = 192.0
+margin_right = 576.0
+margin_bottom = 256.0
+custom_fonts/font = ExtResource( 29 )
+text = "100	"
+align = 1
+valign = 1
+
+[node name="Label_1000_Total" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Drinks"]
+margin_left = 384.0
+margin_top = 256.0
+margin_right = 576.0
+margin_bottom = 320.0
+custom_fonts/font = ExtResource( 29 )
+text = "1000"
+align = 1
+valign = 1
+
+[node name="Label_Total_Total" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Drinks"]
+margin_left = 384.0
+margin_top = 320.0
+margin_right = 576.0
+margin_bottom = 384.0
+grow_horizontal = 0
+size_flags_horizontal = 11
+size_flags_vertical = 8
+custom_fonts/font = ExtResource( 29 )
+text = "1000"
+align = 1
+valign = 1
+
+[node name="Label_Total_Items" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Drinks"]
+margin_top = 320.0
+margin_right = 192.0
+margin_bottom = 384.0
+grow_horizontal = 0
+size_flags_horizontal = 11
+size_flags_vertical = 8
+custom_fonts/font = ExtResource( 29 )
+text = "1000"
+align = 1
+valign = 1
+
+[node name="Label_10" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Drinks"]
+margin_left = 64.0
+margin_top = 128.0
+margin_right = 256.0
+margin_bottom = 192.0
+custom_fonts/font = ExtResource( 29 )
+text = "10	"
+align = 1
+valign = 1
+
+[node name="Label_100" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Drinks"]
+margin_left = 64.0
+margin_top = 192.0
+margin_right = 256.0
+margin_bottom = 256.0
+custom_fonts/font = ExtResource( 29 )
+text = "100"
+align = 1
+valign = 1
+
+[node name="Label_1000" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Drinks"]
+margin_left = 64.0
+margin_top = 256.0
+margin_right = 256.0
+margin_bottom = 320.0
+custom_fonts/font = ExtResource( 29 )
+text = "1000	"
+align = 1
+valign = 1
+
+[node name="Confirm" type="Button" parent="Control_Game/TabContainer/Supplies/TabContainer/Drinks"]
+margin_left = 416.0
+margin_top = 388.0
+margin_right = 544.0
+margin_bottom = 452.0
+text = "Confirm"
+
+[node name="Label_Cost" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Drinks"]
+margin_left = 16.0
+margin_right = 147.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 29 )
+text = "Cost :"
+align = 1
+valign = 1
+
+[node name="Label_Cost2" type="Label" parent="Control_Game/TabContainer/Supplies/TabContainer/Drinks"]
+margin_left = 163.0
+margin_right = 294.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 29 )
+text = "Cost :"
+align = 1
+valign = 1
+
+[node name="Sprite_Channa" parent="Control_Game" instance=ExtResource( 24 )]
+
+[node name="Sprite_Bhara" parent="Control_Game" instance=ExtResource( 25 )]
+
+[node name="Sprite_Chutney" parent="Control_Game" instance=ExtResource( 26 )]
+
+[node name="Sprite_Drinks" parent="Control_Game" instance=ExtResource( 27 )]
+
+[node name="Sprite_Doubles" type="Sprite" parent="Control_Game"]
+position = Vector2( 400, 16 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 33 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 128, 64, 64 )
+
+[node name="Label" type="Label" parent="Control_Game/Sprite_Doubles"]
+margin_left = 80.0
+margin_right = 144.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 34 )
+text = "000"
+align = 1
+valign = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Control_Game"]
+margin_left = 664.0
+margin_top = 118.0
+margin_right = 1264.0
+margin_bottom = 690.0
+size_flags_horizontal = 3
+
+[node name="Panel_Info" type="Panel" parent="Control_Game"]
+editor/display_folded = true
+margin_left = 664.0
+margin_top = 16.0
+margin_right = 1264.0
+margin_bottom = 96.0
+script = ExtResource( 35 )
+
+[node name="Panel_Calendar" type="Panel" parent="Control_Game/Panel_Info"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 264.0
+margin_bottom = 72.0
+
+[node name="Year" type="Label" parent="Control_Game/Panel_Info/Panel_Calendar"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "YEAR :"
+
+[node name="Label" type="Label" parent="Control_Game/Panel_Info/Panel_Calendar/Year"]
+margin_left = 44.0
+margin_right = 84.0
+margin_bottom = 14.0
+text = "2000"
+
+[node name="Month" type="Label" parent="Control_Game/Panel_Info/Panel_Calendar"]
+margin_left = 88.0
+margin_right = 141.0
+margin_bottom = 14.0
+text = "Month : "
+
+[node name="Label" type="Label" parent="Control_Game/Panel_Info/Panel_Calendar/Month"]
+margin_left = 60.0
+margin_right = 110.0
+margin_bottom = 14.0
+text = "Janurary"
+
+[node name="Day" type="Label" parent="Control_Game/Panel_Info/Panel_Calendar"]
+margin_left = 208.0
+margin_right = 261.0
+margin_bottom = 14.0
+text = "Day  : "
+
+[node name="Label" type="Label" parent="Control_Game/Panel_Info/Panel_Calendar/Day"]
+margin_left = 40.0
+margin_right = 90.0
+margin_bottom = 14.0
+text = "Monday	"
+
+[node name="Button" type="Button" parent="Control_Game/Panel_Info"]
+margin_left = 384.0
+margin_right = 512.0
+margin_bottom = 64.0
+text = "^^^^^"
+
+[node name="Button_Start" type="Button" parent="Control_Game"]
+margin_left = 16.0
+margin_top = 624.0
+margin_right = 144.0
+margin_bottom = 688.0
+custom_fonts/font = SubResource( 3 )
+text = "Start"
+
+[node name="Button_MainMenu" type="Button" parent="Control_Game"]
+margin_left = 160.0
+margin_top = 624.0
+margin_right = 288.0
+margin_bottom = 688.0
+custom_fonts/font = SubResource( 3 )
+text = "Main Menu"
+
+[node name="Label_$" type="Label" parent="Control_Game"]
+margin_left = 480.0
+margin_right = 512.0
+margin_bottom = 57.0
+custom_fonts/font = ExtResource( 34 )
+text = "$"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="Control_Game/Label_$"]
+margin_left = 32.0
+margin_top = 14.0
+margin_right = 178.0
+margin_bottom = 49.0
+custom_fonts/font = SubResource( 4 )
+text = "0000000000"
+valign = 1
+clip_text = true
+[connection signal="pressed" from="Control_Title/TextureButton_House" to="Control_Title" method="_on_TextureButton_House_pressed"]
+[connection signal="pressed" from="Control_Title/TextureButton_Settings" to="Control_Title" method="_on_TextureButton_Settings_pressed"]
+[connection signal="pressed" from="Control_Title/TextureButton_Credits" to="Control_Title" method="_on_TextureButton_Credits_pressed"]
+[connection signal="pressed" from="Control_Title/TextureButton_Help" to="Control_Title" method="_on_TextureButton_Help_pressed"]
+[connection signal="pressed" from="Control_Title/TextureButton_Quit" to="Control_Title" method="_on_TextureButton_Quit_pressed"]
+[connection signal="changed" from="Control_Game/TabContainer/Results/Panel/HSlider_servicetime" to="Control_Game" method="_on_HSlider_servicetime_changed"]
+[connection signal="value_changed" from="Control_Game/TabContainer/Results/Panel/HSlider_servicetime" to="Control_Game" method="_on_HSlider_servicetime_value_changed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Upgrades/Right" to="Control_Game/TabContainer/Upgrades" method="_on_Right_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Upgrades/Left" to="Control_Game/TabContainer/Upgrades" method="_on_Left_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Upgrades/Button_Confirm" to="Control_Game/TabContainer/Upgrades" method="_on_Button_Confirm_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Marketing/Button_Confirm" to="Control_Game/TabContainer/Recipe" method="_on_Button_Confirm_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Recipe/Panel_Channa/Right_Channa" to="Control_Game/TabContainer/Recipe" method="_on_Right_Channa_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Recipe/Panel_Channa/Left_Channa" to="Control_Game/TabContainer/Recipe" method="_on_Left_Channa_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Recipe/Panel_Bhara/Right_Bhara" to="Control_Game/TabContainer/Recipe" method="_on_Right_Bhara_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Recipe/Panel_Bhara/Left_Bhara" to="Control_Game/TabContainer/Recipe" method="_on_Left_Bhara_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Recipe/Panel_Chutney/Right_Chutney" to="Control_Game/TabContainer/Recipe" method="_on_Right_Chutney_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Recipe/Panel_Chutney/Left_Chutney" to="Control_Game/TabContainer/Recipe" method="_on_Left_Chutney_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Recipe/Panel_Drinks/Right_Drinks" to="Control_Game/TabContainer/Recipe" method="_on_Right_Drinks_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Recipe/Panel_Drinks/Left_Drinks" to="Control_Game/TabContainer/Recipe" method="_on_Left_Drinks_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Recipe/Button_Confirm" to="Control_Game/TabContainer/Recipe" method="_on_Button_Confirm_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Channa/Left_1" to="Control_Game/TabContainer/Supplies/TabContainer/Channa" method="_on_Left_1_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Channa/Left_10" to="Control_Game/TabContainer/Supplies/TabContainer/Channa" method="_on_Left_10_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Channa/Left_100" to="Control_Game/TabContainer/Supplies/TabContainer/Channa" method="_on_Left_100_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Channa/Left_1000" to="Control_Game/TabContainer/Supplies/TabContainer/Channa" method="_on_Left_1000_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Channa/Right_1" to="Control_Game/TabContainer/Supplies/TabContainer/Channa" method="_on_Right_1_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Channa/Right_10" to="Control_Game/TabContainer/Supplies/TabContainer/Channa" method="_on_Right_10_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Channa/Right_100" to="Control_Game/TabContainer/Supplies/TabContainer/Channa" method="_on_Right_100_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Channa/Right_1000" to="Control_Game/TabContainer/Supplies/TabContainer/Channa" method="_on_Right_1000_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Channa/Confirm" to="Control_Game/TabContainer/Supplies/TabContainer/Channa" method="_on_Confirm_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Bhara/Left_1" to="Control_Game/TabContainer/Supplies/TabContainer/Bhara" method="_on_Left_1_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Bhara/Left_10" to="Control_Game/TabContainer/Supplies/TabContainer/Bhara" method="_on_Left_10_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Bhara/Left_100" to="Control_Game/TabContainer/Supplies/TabContainer/Bhara" method="_on_Left_100_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Bhara/Left_1000" to="Control_Game/TabContainer/Supplies/TabContainer/Bhara" method="_on_Left_1000_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Bhara/Right_1" to="Control_Game/TabContainer/Supplies/TabContainer/Bhara" method="_on_Right_1_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Bhara/Right_10" to="Control_Game/TabContainer/Supplies/TabContainer/Bhara" method="_on_Right_10_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Bhara/Right_100" to="Control_Game/TabContainer/Supplies/TabContainer/Bhara" method="_on_Right_100_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Bhara/Right_1000" to="Control_Game/TabContainer/Supplies/TabContainer/Bhara" method="_on_Right_1000_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Bhara/Confirm" to="Control_Game/TabContainer/Supplies/TabContainer/Bhara" method="_on_Confirm_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Chutney/Left_1" to="Control_Game/TabContainer/Supplies/TabContainer/Chutney" method="_on_Left_1_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Chutney/Left_10" to="Control_Game/TabContainer/Supplies/TabContainer/Chutney" method="_on_Left_10_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Chutney/Left_100" to="Control_Game/TabContainer/Supplies/TabContainer/Chutney" method="_on_Left_100_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Chutney/Left_1000" to="Control_Game/TabContainer/Supplies/TabContainer/Chutney" method="_on_Left_1000_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Chutney/Right_1" to="Control_Game/TabContainer/Supplies/TabContainer/Chutney" method="_on_Right_1_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Chutney/Right_10" to="Control_Game/TabContainer/Supplies/TabContainer/Chutney" method="_on_Right_10_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Chutney/Right_100" to="Control_Game/TabContainer/Supplies/TabContainer/Chutney" method="_on_Right_100_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Chutney/Right_1000" to="Control_Game/TabContainer/Supplies/TabContainer/Chutney" method="_on_Right_1000_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Chutney/Confirm" to="Control_Game/TabContainer/Supplies/TabContainer/Chutney" method="_on_Confirm_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Drinks/Left_1" to="Control_Game/TabContainer/Supplies/TabContainer/Drinks" method="_on_Left_1_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Drinks/Left_10" to="Control_Game/TabContainer/Supplies/TabContainer/Drinks" method="_on_Left_10_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Drinks/Left_100" to="Control_Game/TabContainer/Supplies/TabContainer/Drinks" method="_on_Left_100_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Drinks/Left_1000" to="Control_Game/TabContainer/Supplies/TabContainer/Drinks" method="_on_Left_1000_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Drinks/Right_1" to="Control_Game/TabContainer/Supplies/TabContainer/Drinks" method="_on_Right_1_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Drinks/Right_10" to="Control_Game/TabContainer/Supplies/TabContainer/Drinks" method="_on_Right_10_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Drinks/Right_100" to="Control_Game/TabContainer/Supplies/TabContainer/Drinks" method="_on_Right_100_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Drinks/Right_1000" to="Control_Game/TabContainer/Supplies/TabContainer/Drinks" method="_on_Right_1000_pressed"]
+[connection signal="pressed" from="Control_Game/TabContainer/Supplies/TabContainer/Drinks/Confirm" to="Control_Game/TabContainer/Supplies/TabContainer/Drinks" method="_on_Confirm_pressed"]
+[connection signal="pressed" from="Control_Game/Panel_Info/Button" to="Control_Game/Panel_Info" method="_on_Button_pressed"]
+[connection signal="pressed" from="Control_Game/Button_Start" to="Control_Game" method="_on_Button_Start_pressed"]
